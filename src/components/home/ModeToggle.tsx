@@ -31,9 +31,9 @@ export function ModeToggle() {
     >
       <span className="sr-only">Toggle theme</span>
       {theme === "dark" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem] text-primary" />
+        <Sun className="h-[1.2rem] w-[1.2rem] text-emerald-700" />
       ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem] text-primary" />
+        <Moon className="h-[1.2rem] w-[1.2rem] text-emerald-500" />
       )}
     </Button>
   )

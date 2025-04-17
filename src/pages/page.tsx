@@ -1,4 +1,6 @@
-import { ModeToggle } from "@/components/ModeToggle"
+import Header from "@/components/home/Header"
+import HeroSection from "@/components/home/HeroSection"
+import { ModeToggle } from "@/components/home/ModeToggle"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Flower2, Star, Compass, Feather, Cloud } from "lucide-react"
@@ -6,50 +8,12 @@ import { Flower2, Star, Compass, Feather, Cloud } from "lucide-react"
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#fcfaf7] dark:bg-[#0f0e0c]">
+
       {/* Header */}
-      <header className="container mx-auto py-6 px-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <Flower2 className="h-6 w-6 text-[#4db391] font-extralight" />
-          <h1 className="text-2xl font-serif tracking-wider text-[#f4f2f1] font-extralight">oddment.world</h1>
-        </div>
-        <div className="flex items-center gap-4">
-          <nav className="hidden md:flex gap-6 text-[#f4f2f1]">
-            <a href="#" className="text-sm hover:text-primary transition-colors">
-              Journal
-            </a>
-            <a href="#" className="text-sm hover:text-primary transition-colors">
-              Meditations
-            </a>
-            <a href="#" className="text-sm hover:text-primary transition-colors">
-              Wisdom
-            </a>
-            <a href="#" className="text-sm hover:text-primary transition-colors">
-              About
-            </a>
-          </nav>
-          <ModeToggle />
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32">
-
-        <div className="container mx-auto px-4 flex flex-col items-center text-center relative z-10 text-[#f4f2f1] ">
-          <div className="mb-8 relative text-emerald-200">
-            <Feather className="h-12 w-12 relative z-10 p-2 text-emerald-300" />
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif max-w-3xl mb-6 leading-tight">
-            Embrace the gentle wisdom of everyday moments
-          </h2>
-          <p className="text-lg md:text-xl max-w-2xl mb-10 text-[#bab3ab]">
-            A sanctuary for the soul, where contemplation meets daily life and ordinary experiences reveal extraordinary
-            truths.
-          </p>
-          <Button size="lg" className="rounded-full px-8 py-6 bg-[#4db391] hover:bg-emerald-800">
-            Begin Your Journey
-          </Button>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Featured Posts */}
       <section className="container mx-auto px-4 py-20">
@@ -166,8 +130,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {categories.map((category, index) => (
             <a href="#" key={index}>
-              <div className="group relative overflow-hidden rounded-xl aspect-[4/3] border border-[#4db3911a]">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-emerald-900/30 z-10"></div>
+              <div className="group relative overflow-hidden rounded-xl aspect-[4/3]">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 z-10"></div>
                 <img
                   src={category.image || "/placeholder.svg"}
                   alt={category.title} 
