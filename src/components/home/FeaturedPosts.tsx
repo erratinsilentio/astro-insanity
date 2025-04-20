@@ -1,5 +1,7 @@
-import { Compass, Feather, Star } from "lucide-react"
+import { Compass, Feather, Star, ArrowRight } from "lucide-react"
 import { Card } from "../ui/card"
+import { Button } from "../ui/button"
+import { Arrow } from "@radix-ui/react-dropdown-menu"
 
 export default function FeaturedPosts() {
     
@@ -10,13 +12,14 @@ export default function FeaturedPosts() {
             <div className="h-px w-12 bg-emerald-800"></div>
             <h3 className="text-2xl font-serif text-[#f4f2f1]">Recent Contemplations</h3>
           </div>
-          <a href="#" className="text-sm text-emerald-700 hover:underline">
-            View All
-          </a>
+          <Button className="rounded-full">
+            Show All
+            <ArrowRight />
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <Card className="md:col-span-8 overflow-hidden bg-emerald-900/50 backdrop-blur-sm hover:scale-[102%] transition-all duration-300 py-0 border border-[#4db3911a]">
+          <Card className="md:col-span-8 overflow-hidden bg-emerald-900/50 backdrop-blur-sm hover:scale-[102%] transition-all duration-300 py-0 border border-[#4db3911a] rounded-2xl">
             <div className="grid md:grid-cols-2 h-full">
               <div className="relative overflow-hidden">
                 <img
@@ -34,9 +37,11 @@ export default function FeaturedPosts() {
                 <span className="text-xs text-muted-foreground mb-2">{featuredPosts[0].date}</span>
                 <h4 className="text-2xl font-serif mb-4 text-[#f4f2f1]">{featuredPosts[0].title}</h4>
                 <p className="text-muted-foreground text-sm mb-6">{featuredPosts[0].excerpt}</p>
-                <a href="#" className="text-primary text-sm hover:underline inline-flex items-center gap-2">
-                  Read More <Feather className="h-3 w-3" />
-                </a>
+                    <a href="#" className="text-primary text-xs hover:underline">
+                      <Button className="rounded-full text-xs cursor-pointer bg-gradient-to-br from-[#4db3910d]/5 via-[#4db3911a] to-transparent border border-[#4db3911a]" >
+                        Read More <Feather className="h-3 w-3" />
+                      </Button>
+                    </a>
               </div>
             </div>
           </Card>
@@ -45,7 +50,7 @@ export default function FeaturedPosts() {
             {featuredPosts.slice(1, 3).map((post, index) => (
               <Card
                 key={index}
-                className="overflow-hidden border-none bg-card/50 backdrop-blur-sm hover:scale-[102%] transition-all duration-300"
+                className="overflow-hidden border-none bg-card/50 backdrop-blur-sm hover:scale-[102%] transition-all duration-300 rounded-2xl"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
@@ -56,10 +61,12 @@ export default function FeaturedPosts() {
                   </div>
                   <h4 className="text-xl font-serif mb-3">{post.title}</h4>
                   <p className="text-muted-foreground text-sm mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between pt-4">
                     <span className="text-xs text-muted-foreground">{post.date}</span>
-                    <a href="#" className="text-primary text-sm hover:underline">
-                      Read More
+                    <a href="#" className="text-primary text-xs hover:underline">
+                      <Button className="rounded-full text-xs cursor-pointer bg-gradient-to-br from-[#4db3910d]/5 via-[#4db3911a] to-transparent border border-[#4db3911a]" >
+                        Read More <Feather className="h-3 w-3" />
+                      </Button>
                     </a>
                   </div>
                 </div>

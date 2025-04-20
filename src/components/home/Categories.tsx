@@ -10,26 +10,31 @@ export default function Categories() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {categories.map((category, index) => (
-            <a href="#" key={index}>
-              <div className="group relative overflow-hidden rounded-xl aspect-[4/3]">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 z-10"></div>
-                <img
-                  src={category.image || "/placeholder.svg"}
-                  alt={category.title} 
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 z-20 flex flex-col justify-end p-6">
-                  <div className="w-10 h-10 rounded-full bg-emerald-700 backdrop-blur-md flex items-center justify-center mb-3">
-                    {category.icon}
-                  </div>
-                  <h4 className="text-xl font-serif text-white mb-1">{category.title}</h4>
-                  <p className="text-sm text-white/80">{category.description}</p>
-                </div>
-              </div>
-            </a>
-          ))}
+  {categories.map((category, index) => (
+    <a href="#" key={index} className="group">
+      <div className="bg-card/50 rounded-2xl overflow-hidden shadow transition hover:shadow-lg h-[250px] flex flex-col">
+        <div className="h-[100px] overflow-hidden">
+          <img
+            src={category.image || "/placeholder.svg"}
+            alt={category.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-200"
+          />
         </div>
+        <div className="p-4 flex flex-col justify-between flex-grow">
+          <div>
+            <div className="w-10 h-10 rounded-full bg-emerald-700 backdrop-blur-md flex items-center justify-center mb-2">
+              {category.icon}
+            </div>
+            <h4 className="text-base font-serif text-white mb-1 truncate">{category.title}</h4>
+            <p className="text-xs text-white/80 line-clamp-2">{category.description}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
+
+
       </section>
     )
 }
@@ -37,27 +42,27 @@ export default function Categories() {
 
 const categories = [
   {
-    title: "Daily Practice",
-    description: "Rituals and habits for everyday spirituality",
-    image: "/placeholder.svg?height=300&width=400",
+    title: "Philosophy & Wisdom",
+    description: "Rituals and habits for everyday life",
+    image: "/blog-placeholder-2.jpg",
     icon: <Feather className="h-5 w-5 text-white" />,
   },
   {
-    title: "Inner Wisdom",
+    title: "Spiritual Teachings",
     description: "Insights from ancient and modern teachings",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/blog-placeholder-3.jpg",
     icon: <Star className="h-5 w-5 text-white" />,
   },
   {
-    title: "Sacred Journeys",
+    title: "Extraterrestial Life",
     description: "Explorations of spiritual places and paths",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/blog-placeholder-4.jpg",
     icon: <Compass className="h-5 w-5 text-white" />,
   },
   {
-    title: "Natural Harmony",
+    title: "Psychedelics & Nature",
     description: "Finding connection through nature",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/blog-placeholder-5.jpg",
     icon: <Flower2 className="h-5 w-5 text-white" />,
   },
 ]

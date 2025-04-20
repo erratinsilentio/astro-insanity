@@ -1,31 +1,8 @@
-import Categories from "@/components/home/Categories"
-import FeaturedPosts from "@/components/home/FeaturedPosts"
-import Footer from "@/components/home/Footer"
-import Header from "@/components/home/Header"
-import HeroSection from "@/components/home/HeroSection"
-import { ModeToggle } from "@/components/home/ModeToggle"
-import QuoteSection from "@/components/home/QuoteSection"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Flower2, Star, Compass, Feather, Cloud } from "lucide-react"
+import { Cloud } from "lucide-react";
+import { Button } from "../ui/button";
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-[#fcfaf7] dark:bg-[#0f0e0c]">
-
-      {/* Header */}
-      <Header />
-
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Featured Posts */}
-      <FeaturedPosts />
-
-      {/* Quote Section */}
-      <QuoteSection />
-
-      {/* Newsletter */}
+export default function Newsletter() {
+return (
       <section className="container mx-auto px-4 py-20">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#4db3910d]/5 via-[#4db3911a] to-transparent p-10 md:p-16 border border-[#4db3911a]">
           <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
@@ -51,14 +28,5 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Categories */}
-      <Categories />
-
-      {/* Footer */}
-      <Footer />
-      
-    </div>
-  )
+)
 }
-
