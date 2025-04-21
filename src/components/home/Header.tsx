@@ -41,7 +41,7 @@ export default function Header() {
             <Flower2 className="h-6 w-6 text-emerald-700 transition-all duration-300 group-hover:rotate-45" />
             <span className="absolute -inset-1.5 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-all duration-300"></span>
           </div>
-          <h1 className="text-2xl font-serif tracking-wider">oddment.world</h1>
+          <h1 className="text-2xl font-serif tracking-wider">dailypeace.com</h1>
         </a>
 
         <section className="flex justify-center items-center">

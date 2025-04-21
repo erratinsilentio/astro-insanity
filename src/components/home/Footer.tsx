@@ -9,7 +9,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Flower2 className="h-5 w-5 text-emerald-800" />
-                <span className="text-lg font-serif">oddment.world</span>
+                <span className="text-lg font-serif">dailypeace.com</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 A space for contemplation, spiritual exploration, and finding meaning in the ordinary moments.
